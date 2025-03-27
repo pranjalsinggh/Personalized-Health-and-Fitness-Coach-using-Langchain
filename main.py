@@ -234,6 +234,3 @@ st.sidebar.markdown("""
         </p>
     </div>
 """, unsafe_allow_html=True)
-
-# Clear the cache on every execution
-st.cache_data.clear()
