@@ -181,10 +181,10 @@ st.markdown("<h3 style='text-align: center;'>Get expert-backed fitness, nutritio
 # Initialize session state for user query
 if 'user_query' not in st.session_state:
     st.session_state.user_query = ""
-    
+
 # User Input
 st.markdown("<h2 style='text-align: center;'>🔍 Enter your question:</h2>", unsafe_allow_html=True)
-query = st.text_area(label=' ',value=st.session_state.user_query,placeholder="E.g., Best diet plan for weight loss?", height=100)
+query = st.text_area(label=' ',value="",placeholder="E.g., Best diet plan for weight loss?", height=100, key="user_query")
 
 if st.button("🚀 Get Insights"):
     if query.strip():
