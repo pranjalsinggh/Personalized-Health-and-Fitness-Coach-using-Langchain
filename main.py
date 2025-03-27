@@ -12,7 +12,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Load OpenAI LLM
-api_key = os.environ.get('OPENAI_API_KEY')
+if "OPENAI_API_KEY" in st.secrets['secrets']:
+    api_key = st.secrets['secrets']['OPENAI_API_KEY']
+else:
+    api_key = os.environ.get('OPENAI_API_KEY')
 
 # Initialize a ChatOpenAI model
 llm = ChatOpenAI(api_key=api_key)
