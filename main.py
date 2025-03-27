@@ -161,7 +161,7 @@ chain = MultiPromptChain(router_chain=router_chain,
                                       verbose=True)
 
 # Streamlit Page Configuration
-st.set_page_config(page_title="Personalized AI Health Coach", page_icon="🏋️", layout="wide")
+st.set_page_config(page_title="Personalized AI Health, Fitness, and Wellness Coach", page_icon="🏋️", layout="wide")
 
 # Custom CSS for UI Styling
 st.markdown("""
@@ -175,7 +175,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Title
-st.markdown("<h1 style='text-align: center;'>🏋️ Personalized AI Health Coach</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>🏋️ Personalized AI Health, Fitness, and Wellness Coach</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Get expert-backed fitness, nutrition, and wellness insights!</h3>", unsafe_allow_html=True)
 
 # User Input
@@ -225,8 +225,8 @@ if st.button("🚀 Get Insights"):
 # Sidebar - About Section with Enhanced Styling
 st.sidebar.markdown("""
     <div style="background-color:#FF5722; padding:15px; border-radius:10px;">
-        <h2 style="color:white; text-align:center;">ℹ️ About This App</h2>
-        <p style="color:white; font-size:16px; text-align:center;">
+        <h2 style="color:blue; text-align:center;">ℹ️ About This App</h2>
+        <p style="color:blue; font-size:16px; text-align:center;">
             This <b>AI-powered Personalized Health Coach</b> provides tailored insights on 
             <b>fitness, nutrition, and wellness</b>.  
             Simply enter your query to receive <b>expert-backed</b>, actionable guidance 
