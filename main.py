@@ -178,9 +178,13 @@ st.markdown("""
 st.markdown("<h1 style='text-align: center;'>🏋️ Personalized AI Health Coach</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Get expert-backed fitness, nutrition, and wellness insights!</h3>", unsafe_allow_html=True)
 
+# Initialize session state for user query
+if 'user_query' not in st.session_state:
+    st.session_state.user_query = ""
+    
 # User Input
 st.markdown("<h2 style='text-align: center;'>🔍 Enter your question:</h2>", unsafe_allow_html=True)
-query = st.text_area(label=' ',placeholder="E.g., Best diet plan for weight loss?", height=100)
+query = st.text_area(label=' ',value=st.session_state.user_query,placeholder="E.g., Best diet plan for weight loss?", height=100)
 
 if st.button("🚀 Get Insights"):
     if query.strip():
@@ -200,6 +204,9 @@ if st.button("🚀 Get Insights"):
         st.markdown(f"<div class='big-font'>💡 Insights: </div>", unsafe_allow_html=True)
         st.write(response)
      
+        # Clear the query text area by resetting session state
+        st.session_state.user_query = ""
+
         # Initialize session state for feedback if not present
         if 'upvote_count' not in st.session_state:
             st.session_state.upvote_count = 0
