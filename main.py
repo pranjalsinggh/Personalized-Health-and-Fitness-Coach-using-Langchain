@@ -236,4 +236,4 @@ st.sidebar.markdown("""
 """, unsafe_allow_html=True)
 
 # Clear the cache on every execution
-st.legacy_caching.clear_cache()
+st.cache_data.clear()
